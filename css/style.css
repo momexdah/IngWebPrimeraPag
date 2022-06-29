@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+nav{
+    position: absolute;
+    display: inline-block;
+    padding: 10px 15px;
+    top: 0;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 15px;
+    padding: 10px 15px;
+}
+nav ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a{
+    position: relative;
+    padding: 15px 40px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.5s;
+    color: #fff;
+    background: #6e54d6;
+    margin-inline-end: 20px;
+}
+nav ul li a:hover{
+    font-size: 1.2em;
+    background: linear-gradient(#ff7008,#ffe02a);
+    border-radius: 20px;
+    color: #555;
+
+}
+
+.hero{
+    text-transform: uppercase;
+}
