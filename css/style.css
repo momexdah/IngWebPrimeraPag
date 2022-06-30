@@ -1,17 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+
 }
-nav{
+
+nav {
     position: absolute;
     display: inline-block;
     padding: 10px 15px;
@@ -25,31 +30,169 @@ nav ul {
     margin: 5px 15px;
     padding: 10px 15px;
 }
-nav ul li{
+
+nav ul li {
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-nav ul li a{
+
+nav ul li a {
     position: relative;
     padding: 15px 40px;
     text-decoration: none;
     letter-spacing: 2px;
-    text-transform: uppercase;
     transition: 0.5s;
     color: #fff;
     background: #6e54d6;
     margin-inline-end: 20px;
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     font-size: 1.2em;
-    background: linear-gradient(#ff7008,#ffe02a);
+    background: linear-gradient(#ff7008, #ffe02a);
     border-radius: 20px;
     color: #555;
 
 }
 
-.hero{
-    text-transform: uppercase;
+.hero {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.5s;
+    height: 200px;
+    width: 450px;
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.hero:hover {
+    height: 480px;
+}
+
+.imgBox {
+    position: absolute;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    transition: 0.5s;
+
+}
+
+.hero:hover .imgBox {
+    width: 250px;
+    height: 250px;
+}
+
+.imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero:hover .imgBox {
+    width: 250px;
+    height: 250px;
+}
+
+.hero .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.hero .content .details {
+    padding: 40px;
+    text-align: center;
+    transition: 0.5s;
+    transform: translateY(158px);
+}
+
+.hero:hover .content .details {
+    transform: translateY(0px);
+}
+
+.hero .content .details h2 {
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.hero .content .details h2 span {
+    font-size: 0.75em;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.hero .content .details .data {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+
+}
+
+.hero .content .details .data h3 {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.hero .content .details .data h3 span {
+    font-size: 0.85em;
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.hero .content .details .actionBtn {
+    display: flex;
+    justify-content: space-between;
+    /*gap: 20px;*/
+}
+
+.hero .content .details .actionBtn button {
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 500;
+    background: #6e54d6;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.hero .content .details .actionBtn button:nth-child(2) {
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+
+}
+
+.hero .content .details .actionBtn button:hover {
+    background: #fff;
+    color: #6e54d6;
+    border: 1px solid #6e54d6;
+}
+
+.hero .content .details .actionBtn button:hover:nth-child(2) {
+    border: 1px solid #999;
+    background: #555;
+    color: #fff;
 }
